@@ -1,6 +1,6 @@
 from chromadb import HttpClient
 
-client = HttpClient(host="localhost", port=8000)
+client = HttpClient(host="192.168.21.76", port=8000)
 collection = client.get_collection("langchain")
 
 print(client.list_collections())
