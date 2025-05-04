@@ -14,7 +14,7 @@ class DeepSeekChat(BaseChatModel):
     model: str = "deepseek-chat"
     temperature: float = 0.7
     api_key: Optional[str] = os.getenv("DEEPSEEK_API_KEY")
-    system_prompt: str = "your response is being used directly in an automated system, DO NOT return any extra description, SQL-QUERY-ONLY"
+    system_prompt: str = "your response is being used directly in an automated system, DO NOT return any extra description, SQL-QUERY-ONLY, If there was irrelevant data in Context, Just ignore it."
 
     def _call(
             self,
